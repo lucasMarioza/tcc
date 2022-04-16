@@ -41,7 +41,7 @@ function setup_cfggrind() {
     log "Installing cfggrind binaries"
     cd "${BUILD_DIR}";
     make install -j4 || fatal "unable to install cfggrind";
-    cp cfggrind/cfggrind2bolt "${INSTALL_DIR}/bin/" || fatal "unable to install cfggrind2bolt";
+    cp cfggrind2bolt "${INSTALL_DIR}/bin/" || fatal "unable to install cfggrind2bolt";
     # rm -rf *
     log "Cfggrind binaries installed"
   else

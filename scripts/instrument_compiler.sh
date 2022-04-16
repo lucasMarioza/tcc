@@ -99,7 +99,7 @@ function _prepare_binaries() {
 function _run_profiling() {
   case "${compiler}" in
     clang)
-      CLANG_DIR="${PROJECT_ROOT}/installs/clang/bin";
+      CLANG_DIR="${PROJECT_ROOT}/installs/clang";
       export CC="${CLANG_DIR}/bin/clang";
       export CXX="${CLANG_DIR}/bin/clang++";
       #[ "${mode}" == "cfggrind" ] \
@@ -109,7 +109,7 @@ function _run_profiling() {
 
       ;;
     gcc)
-      GCC_DIR="${PROJECT_ROOT}/installs/gcc/libexec/gcc/x86_64-pc-linux-gnu/11.2.0";
+      GCC_DIR="${PROJECT_ROOT}/installs/gcc";
       export CC="${GCC_DIR}/bin/gcc";
       export CXX="${GCC_DIR}/bin/g++";
       LINK_FLAGS="-Wl,-rpath,${GCC_DIR}/lib64 -L${GCC_DIR}/lib64";
